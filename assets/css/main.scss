@@ -166,9 +166,15 @@ a:hover {
   color: var(--accent);
 }
 
+.content {
+  overflow-x: hidden;
+}
+
 .content img {
   max-width: 100%;
+  width: 100%;
   height: auto;
+  display: block;
   border-radius: 0.5rem;
   margin: 1.5rem 0;
 }
