@@ -1,0 +1,37 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Welcome to <span>Automatic Fanatic</span></h1>
+    <p class="lead text-secondary mb-4" style="max-width: 600px; margin: 0 auto;">Your guide to smart home automation. Tips, tutorials, and projects to help you build the connected home of your dreams.</p>
+    <a href="{{ site.author.youtube }}" class="btn btn-primary btn-lg" target="_blank">Subscribe on YouTube</a>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Latest Posts</h2>
+
+    {% if site.posts.size > 0 %}
+    <div class="row g-4">
+      {% for post in site.posts limit:6 %}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <small class="text-secondary">{{ post.date | date: "%B %d, %Y" }}</small>
+            <h5 class="card-title mt-2"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+            <p class="card-text text-secondary">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            <a href="{{ post.url | relative_url }}" class="text-decoration-none">Read more &rarr;</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-secondary">No posts yet. Check back soon for home automation content!</p>
+    {% endif %}
+  </div>
+</section>

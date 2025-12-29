@@ -1,0 +1,19 @@
+{
+  "name": "Automatic Fanatic - Jekyll",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [4000, 35729],
+  "runArgs": ["-p", "4000:4000", "-p", "35729:35729"],
+  "postCreateCommand": "bundle install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "shopify.ruby-lsp",
+        "sissel.shopify-liquid",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}

@@ -1,0 +1,44 @@
+title: Automatic Fanatic
+description: Home automation tips, tutorials, and projects
+url: "https://automaticfanatic.com"
+baseurl: ""
+
+author:
+  name: Automatic Fanatic
+  youtube: https://youtube.com/@automaticfanatic
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Sass settings
+sass:
+  style: compressed
+
+# Permalink style
+permalink: /blog/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

@@ -1,0 +1,206 @@
+---
+---
+
+// Custom overrides based on logo colors
+:root {
+  --bs-body-bg: #0a0a0a;
+  --bs-body-color: #e6edf3;
+  --bs-secondary-bg: #1a1a1a;
+  --bs-border-color: #333;
+  --accent: #E84C3D;
+  --accent-hover: #c0392b;
+  --robot-gray: #8E9EAB;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+.navbar {
+  background: linear-gradient(180deg, rgba(30,30,30,0.98) 0%, rgba(10,10,10,0.98) 100%) !important;
+  border-bottom: 2px solid var(--accent);
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(232, 76, 61, 0.15);
+}
+
+.navbar > .container {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 2rem;
+}
+
+.navbar-brand img {
+  height: 70px;
+  width: auto;
+  filter: drop-shadow(0 2px 8px rgba(232, 76, 61, 0.3));
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.navbar-brand:hover img {
+  filter: drop-shadow(0 4px 12px rgba(232, 76, 61, 0.5));
+  transform: scale(1.02);
+}
+
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 90px;
+  }
+}
+
+.nav-link {
+  color: var(--robot-gray) !important;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 8px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  background: rgba(232, 76, 61, 0.15);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: all 0.2s;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 2.5rem);
+}
+
+.navbar-toggler {
+  border-color: var(--accent);
+  padding: 0.5rem 0.75rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(232, 76, 61, 0.25);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.hero {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, var(--bs-secondary-bg) 0%, var(--bs-body-bg) 100%);
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+
+.card {
+  background: var(--bs-secondary-bg);
+  border: 1px solid var(--bs-border-color);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.card-title a {
+  color: var(--bs-body-color);
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: var(--accent);
+}
+
+.youtube-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+footer {
+  background: var(--bs-secondary-bg);
+  border-top: 1px solid var(--bs-border-color);
+  margin-top: auto;
+}
+
+footer a {
+  color: var(--robot-gray);
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+.form-control {
+  background: var(--bs-secondary-bg);
+  border-color: var(--bs-border-color);
+  color: var(--bs-body-color);
+}
+
+.form-control:focus {
+  background: var(--bs-secondary-bg);
+  border-color: var(--accent);
+  color: var(--bs-body-color);
+  box-shadow: 0 0 0 0.25rem rgba(232, 76, 61, 0.25);
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.border-accent {
+  border-color: var(--accent) !important;
+}
