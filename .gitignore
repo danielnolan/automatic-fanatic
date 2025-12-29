@@ -6,3 +6,6 @@ Gemfile.lock
 *.gem
 .bundle/
 vendor/
+
+# Blog post content/drafts
+_content/
