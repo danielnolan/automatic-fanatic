@@ -119,31 +119,31 @@ a:hover {
   color: var(--accent);
 }
 
-.btn-primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+.btn-primary,
+.btn-primary:link,
+.btn-primary:visited {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
   font-weight: 600;
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-  color: #fff;
+  background: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  color: #fff !important;
 }
 
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active,
-.btn-primary:focus-visible {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-  color: #fff;
-  box-shadow: 0 0 0 0.25rem rgba(232, 76, 61, 0.5);
-}
-
-.btn-primary:active:focus {
-  box-shadow: 0 0 0 0.25rem rgba(232, 76, 61, 0.5);
+.btn-primary:focus-visible,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active {
+  background: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 0.25rem rgba(232, 76, 61, 0.5) !important;
 }
 
 .card {
