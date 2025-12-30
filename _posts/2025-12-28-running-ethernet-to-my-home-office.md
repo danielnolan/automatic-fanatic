@@ -83,7 +83,7 @@ Labeling every cable at both ends saves so much troubleshooting time later. Trus
 
 With all the cables run and terminated, I moved the mini rack to its new home in the office:
 
-![Final office setup with server rack](/assets/images/posts/ethernet-office/IMG_2936.jpg)
+![Final office setup with server rack](/assets/images/posts/ethernet-office/IMG_2957.jpg)
 
 The setup now includes:
 - **Starlink router** - Providing internet to the whole house
