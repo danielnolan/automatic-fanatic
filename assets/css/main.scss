@@ -171,12 +171,55 @@ a:hover {
 }
 
 .content img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
   display: block;
   border-radius: 0.5rem;
   margin: 1.5rem 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix link active/visited states */
+a:active,
+a:focus {
+  color: var(--accent-hover) !important;
+  outline-color: var(--accent) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bs-body-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bs-body-bg);
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent);
+  color: #fff;
 }
 
 .youtube-embed {
