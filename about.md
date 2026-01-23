@@ -15,6 +15,7 @@ Welcome! I'm the creator behind Automatic Fanatic, a YouTube channel dedicated t
 - **Linux**: From daily drivers to servers, embracing open source operating systems
 - **Privacy**: Practical steps to protect your data and digital life
 - **Open Source Solutions**: Replacing proprietary software with community-driven alternatives
+- **Product Reviews**: Honest takes on devices and hardware that respect your privacy
 
 ### Why This Matters
 
