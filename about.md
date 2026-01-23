@@ -6,18 +6,19 @@ permalink: /about/
 
 ## About Automatic Fanatic
 
-Welcome! I'm the creator behind Automatic Fanatic, a YouTube channel dedicated to helping you build a smarter home.
+Welcome! I'm the creator behind Automatic Fanatic, a YouTube channel dedicated to helping you take control of your technology with privacy-focused, open source solutions.
 
 ### What I Cover
 
-- **Smart Home Platforms**: Home Assistant, SmartThings, Apple HomeKit, and more
-- **DIY Projects**: Custom automations, sensors, and controllers
-- **Product Reviews**: Honest takes on the latest smart home gadgets
-- **Tutorials**: Step-by-step guides to level up your automation game
+- **Home Assistant**: Building a smart home you can trust with local control
+- **Home Lab & Self-Hosting**: Running your own services and taking back control from the cloud
+- **Linux**: From daily drivers to servers, embracing open source operating systems
+- **Privacy**: Practical steps to protect your data and digital life
+- **Open Source Solutions**: Replacing proprietary software with community-driven alternatives
 
-### Why Home Automation?
+### Why This Matters
 
-I believe technology should make our lives easier, not more complicated. Home automation done right saves time, energy, and gives you peace of mind. My goal is to share what I've learned so you can avoid the pitfalls and get straight to the good stuff.
+I believe technology should work for you, not spy on you. Whether it's a smart home that doesn't phone home, a server running in your closet, or simply choosing software that respects your privacy, there's a better way than handing everything over to big tech. My goal is to share what I've learned so you can build a setup you actually own and control.
 
 ### Connect With Me
 
