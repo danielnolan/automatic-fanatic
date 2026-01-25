@@ -25,4 +25,4 @@ I believe technology should work for you, not spy on you. Whether it's a smart h
 
 The best way to stay updated is to [subscribe on YouTube]({{ site.author.youtube }}). I post new videos regularly covering everything from beginner basics to advanced automation techniques.
 
-Have questions or ideas for future content? Head over to the [contact page](/contact) and drop me a line!
+Have questions or ideas for future content? Head over to the [contact page](/contact/) and drop me a line!
