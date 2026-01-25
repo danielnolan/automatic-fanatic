@@ -22,7 +22,7 @@ sass:
   style: compressed
 
 # Permalink style
-permalink: /blog/:title/
+permalink: /blog/:title
 
 # Collections
 collections:
