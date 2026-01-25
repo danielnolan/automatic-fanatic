@@ -13,23 +13,87 @@ title: Home
 
 <section class="py-5">
   <div class="container">
-    <h2 class="mb-4">Latest Posts</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">Latest Posts</h2>
+      <a href="{{ '/blog' | relative_url }}" class="btn btn-outline-accent">View All Posts</a>
+    </div>
 
     {% if site.posts.size > 0 %}
-    <div class="row g-4">
-      {% for post in site.posts limit:6 %}
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <small class="text-secondary">{{ post.date | date: "%B %d, %Y" }}</small>
-            <h5 class="card-title mt-2"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
-            <p class="card-text text-secondary">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-            <a href="{{ post.url | relative_url }}" class="text-decoration-none">Read more &rarr;</a>
+
+    <!-- Featured Post (Latest) -->
+    {% assign featured = site.posts.first %}
+    <article class="featured-post mb-5">
+      <div class="row g-0 align-items-stretch">
+        <div class="col-lg-6">
+          <div class="featured-post-image{% if featured.youtube_id %} featured-post-video{% endif %}">
+            {% if featured.youtube_id %}
+            <img src="https://img.youtube.com/vi/{{ featured.youtube_id }}/maxresdefault.jpg" alt="{{ featured.title }}">
+            {% elsif featured.featured_image %}
+            <img src="{{ featured.featured_image | relative_url }}" alt="{{ featured.title }}">
+            {% else %}
+            <div class="featured-post-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+              </svg>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="featured-post-content">
+            <span class="badge bg-accent mb-2">Latest Post</span>
+            <div class="mb-2">
+              {% for category in featured.categories limit:3 %}
+              <span class="badge bg-secondary me-1">{{ category }}</span>
+              {% endfor %}
+            </div>
+            <small class="text-secondary d-block mb-2">{{ featured.date | date: "%B %d, %Y" }}</small>
+            <h3 class="featured-post-title">
+              <a href="{{ featured.url | relative_url }}">{{ featured.title }}</a>
+            </h3>
+            <p class="text-secondary mb-4">{{ featured.excerpt | strip_html | truncate: 200 }}</p>
+            <a href="{{ featured.url | relative_url }}" class="btn btn-primary">Read Article &rarr;</a>
           </div>
         </div>
       </div>
+    </article>
+
+    <!-- More Posts -->
+    {% if site.posts.size > 1 %}
+    <h3 class="h5 mb-4 text-secondary">More Posts</h3>
+    <div class="row g-4">
+      {% for post in site.posts offset:1 limit:3 %}
+      <div class="col-md-6 col-lg-4">
+        <article class="card h-100">
+          {% if post.youtube_id %}
+          <a href="{{ post.url | relative_url }}">
+            <img src="https://img.youtube.com/vi/{{ post.youtube_id }}/maxresdefault.jpg" class="card-img-top card-img-video" alt="{{ post.title }}">
+          </a>
+          {% elsif post.featured_image %}
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.featured_image | relative_url }}" class="card-img-top" alt="{{ post.title }}">
+          </a>
+          {% endif %}
+          <div class="card-body d-flex flex-column">
+            <div class="mb-2">
+              {% for category in post.categories limit:2 %}
+              <span class="badge bg-accent-subtle me-1">{{ category }}</span>
+              {% endfor %}
+            </div>
+            <small class="text-secondary">{{ post.date | date: "%B %d, %Y" }}</small>
+            <h5 class="card-title mt-2">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h5>
+            <p class="card-text text-secondary flex-grow-1">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            <a href="{{ post.url | relative_url }}" class="text-decoration-none mt-auto">Read more &rarr;</a>
+          </div>
+        </article>
+      </div>
       {% endfor %}
     </div>
+    {% endif %}
+
     {% else %}
     <p class="text-secondary">No posts yet. Check back soon for home automation content!</p>
     {% endif %}

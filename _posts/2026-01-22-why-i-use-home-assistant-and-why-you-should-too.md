@@ -3,6 +3,7 @@ layout: post
 title: "Why I Use Home Assistant (And Why You Should Too)"
 date: 2026-01-22
 categories: [home assistant, smart home, privacy]
+youtube_id: SKPzojo2pwc
 ---
 
 {% include youtube-embed.html id="SKPzojo2pwc" %}

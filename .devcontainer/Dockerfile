@@ -1,7 +1,8 @@
 FROM mcr.microsoft.com/devcontainers/ruby:3.1
 
-# Install Jekyll dependencies
-RUN apt-get update && apt-get install -y \
+# Remove Yarn repo with expired GPG key, then install Jekyll dependencies
+RUN rm -f /etc/apt/sources.list.d/yarn.list && \
+    apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 

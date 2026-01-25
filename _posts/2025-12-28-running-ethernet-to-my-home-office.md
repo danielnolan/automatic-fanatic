@@ -3,6 +3,7 @@ layout: post
 title: "Running Ethernet to My Home Office: Relocating the Server Rack"
 date: 2025-12-28
 categories: [networking, diy, behind the scenes]
+featured_image: /assets/images/posts/ethernet-office/IMG_2892.jpg
 ---
 
 My home automation setup had a problem: the only ethernet port in my house was in the living room. That's where I had my mini rack with the Home Assistant server and my new NAS. But having server equipment humming away next to the couch wasn't ideal, and I needed proper connectivity in my office anyway.
