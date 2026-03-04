@@ -9,3 +9,6 @@ vendor/
 
 # Blog post content/drafts
 _content/
+
+# Claude instructions
+CLAUDE.md
