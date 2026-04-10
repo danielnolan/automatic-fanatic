@@ -10,5 +10,9 @@ vendor/
 # Blog post content/drafts
 _content/
 
+<<<<<<< HEAD
 # Claude instructions
+=======
+# Claude Code (local only)
+>>>>>>> 4bd5e10 (ignore CLAUDE.md)
 CLAUDE.md
